@@ -11,13 +11,35 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "goatd",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "goatd is a GTD (Getting Things Done) task manager",
+    Long: `goatd stores all your GTD data in plain-text MarkDown .md files and
+allows you to work with it via the command line or via the web browser.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+To initialize a new GTD folder structure:
+
+    goatd init  # Not implemented
+
+To verify the structure and content of the MarkDown files (e.g. after manually
+modifying them):
+
+    goatd verify  # Not implemented
+
+To run the webserver:
+
+    goatd server  # Not implemented
+
+To interact with projects:
+
+    goatd projects  # Not implemented
+
+To interact with tasks:
+
+    goatd tasks  # Not implemented
+
+To easily capture (i.e. add to inbox) a new task:
+
+    goatd capture  # Not implemented
+`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -43,5 +65,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
