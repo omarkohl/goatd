@@ -16,7 +16,8 @@ Just some ideas and possible future features.
   should be used e.g. to add a task. Limitations upon the short name should
   only be imposed by the file system (e.g. spaces are fine).
 * Is it better to have 'goatd add X' where X is task, project etc. or 'goatd
-  project add' etc.? I think the second feels more natural. TODO compare with other tools.
+  project add' etc.? I think the second feels more natural. 'hugo' does
+  verb-noun and it corresponds to the way we talk in English.
 * Projects could have subprojects. At the same time it may be nice to split
   projects into multiple files and subdirectories, in particular if the MD
   directory should be used not only for storing tasks but also more prose about
@@ -34,7 +35,14 @@ Just some ideas and possible future features.
   won't do, [→] U+2192 or [>] moved somewhere else
   * GitHub is using x to mark the task as done:
     https://github.blog/2014-04-28-task-lists-in-all-markdown-documents/
+  * The fancy Unicode icons don't seem to add any value. People using a text
+    editor won't benefit in the GUI can translate transparently anyway.
+  * Maybe it would be best to start simple with binary todo/done [ ] and [x]
+    like GitHub, also for compatibility. The 'wont do' state is quite useful to
+    me to document that I didn't do something and why, but maybe it becomes too
+    complicated...
 * How to represent 'waiting for'? A task state [o] or [🕐]? Or a tag? Something else?
+  * Maybe a TAG is also a good option like Zim does
 * Tasks can be defined anywhere in the project doc but when they are moved to
   another document they are put at the end of the h1 Tasks section at the end
   of the document
@@ -51,6 +59,7 @@ Just some ideas and possible future features.
 Projects/
 Done/
 Trash/
+SomeDay/
 Inbox.md
 Reference/
 * When moving to Done, Trash or Reference a timestamp should be appended if
@@ -67,3 +76,14 @@ Reference/
 * Validation of the format is a must. Automatic changes seems like a good idea
   e.g. format everything, add missing sections and params to tasks (no don't,
   makes it more painful to edit the tasks manually)
+* Use mage https://github.com/magefile/mage instead of Makefile
+
+
+# Prior art
+
+Some other projects that may serve as influence or turn out to be better than goatd:
+
+* https://github.com/rockiger/akiee
+* https://github.com/benjaminoakes/markdo
+* https://www.omnigroup.com/omnifocus/features/
+* https://www.taskpaper.com/

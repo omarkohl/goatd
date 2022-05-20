@@ -1,7 +1,9 @@
-# goatd - "Gettings Things Done" task manager
+# goatd - "Gettings Things Done" MarkDown task manager
 
-goatd (pronounced goat-DEE) is a task manager written in Go that follows the
-GTD (therefore the name **G**oa**TD**) methodology.
+goatd (/ɡoʊtˈdiː/ ɡoʊt-DEE) is a task manager written in Go that
+implements the GTD methodology. The name was chosen because it contains the
+letters G, T and D, because the server can run as a daemon and because goats
+are cute.
 
 Goals of the project:
 
@@ -9,7 +11,7 @@ Goals of the project:
 * Few features
 * Few options
 * Usable via the command line
-* Usable via the web browser (includes a HTTP server)
+* Usable via the web browser (goatd includes a HTTP server)
 * Cross platform
 * Single user
 * Data is stored in plain-text MarkDown (.md) files
