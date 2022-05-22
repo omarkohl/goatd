@@ -39,9 +39,10 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	rootCmd.PersistentFlags().StringVar(
+	rootCmd.PersistentFlags().StringVarP(
 		&cfgFile,
 		"config",
+		"c",
 		"",
 		"config file (default is /etc/goatd/goatd.yml or $HOME/.config/goatd/goatd.yaml)",
 	)
