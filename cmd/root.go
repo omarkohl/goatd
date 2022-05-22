@@ -17,33 +17,7 @@ var rootCmd = &cobra.Command{
 	Use:   "goatd",
 	Short: "goatd is a GTD (Getting Things Done) task manager",
 	Long: `goatd stores all your GTD data in plain-text MarkDown .md files and
-allows you to work with it via the command line or via the web browser.
-
-To initialize a new GTD folder structure:
-
-    goatd init  # Not implemented
-
-To verify the structure and content of the MarkDown files (e.g. after manually
-modifying them):
-
-    goatd verify  # Not implemented
-
-To run the webserver:
-
-    goatd server  # Not implemented
-
-To interact with projects:
-
-    goatd projects  # Not implemented
-
-To interact with tasks:
-
-    goatd tasks  # Not implemented
-
-To easily capture (i.e. add to inbox) a new task:
-
-    goatd capture  # Not implemented
-`,
+allows you to work with it via the command line or via the web browser.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },

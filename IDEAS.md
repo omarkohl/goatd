@@ -77,6 +77,9 @@ Reference/
   e.g. format everything, add missing sections and params to tasks (no don't,
   makes it more painful to edit the tasks manually)
 * Use mage https://github.com/magefile/mage instead of Makefile
+* Have an 'init' command that initializes a directory structure or have that
+  happen automatically when specifying a new base-dir?
+* Have a verify/validate command that checks and maybe fixes structural problems etc.
 
 
 # Prior art
