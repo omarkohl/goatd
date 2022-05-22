@@ -2,8 +2,10 @@ package cmd
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path"
+	"path/filepath"
 
 	"github.com/spf13/cobra"
 )
@@ -19,6 +21,9 @@ func initBaseDir() error {
 			return fmt.Errorf("can't get home dir: %w", err)
 		}
 		baseDir = path.Join(home, "goatd")
+	}
+	if _, err := os.Stat(baseDir); os.IsNotExist(err) {
+		fmt.Printf("Will create GTD structure under %v\n", baseDir)
 	}
 	if err := os.MkdirAll(baseDir, 0755); err != nil {
 		return fmt.Errorf("can't create baseDir %v: %w", baseDir, err)
@@ -48,6 +53,33 @@ func initBaseDir() error {
 	return nil
 }
 
+func getTasks(baseDir string) ([]string, error) {
+	var tasks []string
+
+	fmt.Println("Printing whole content of project files instead of only" +
+		" tasks. Continue working here...")
+
+	err := filepath.Walk(
+		path.Join(baseDir, "projects"),
+		func(path string, info os.FileInfo, err error) error {
+			if !info.IsDir() {
+				fmt.Println(path)
+				content, err := ioutil.ReadFile(path)
+				if err != nil {
+					return fmt.Errorf("could not read %v: %w", path, err)
+				}
+				fmt.Println(content)
+			}
+			return nil
+		},
+	)
+	if err != nil {
+		return nil, fmt.Errorf("error getting tasks: %w", err)
+	}
+
+	return tasks, nil
+}
+
 // tasksCmd represents the tasks command
 var tasksCmd = &cobra.Command{
 	Use:   "tasks",
@@ -57,7 +89,14 @@ var tasksCmd = &cobra.Command{
 		if err := initBaseDir(); err != nil {
 			return err
 		}
-		fmt.Println(baseDir)
+		fmt.Printf("Working with baseDir: %v\n", baseDir)
+		tasks, err := getTasks(baseDir)
+		if err != nil {
+			return err
+		}
+		for _, t := range tasks {
+			fmt.Println(t)
+		}
 		return nil
 	},
 }
