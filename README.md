@@ -1,3 +1,5 @@
+![goatd logo](logo.png)
+
 # goatd - GTD MarkDown task manager
 
 **WARNING: Right now the project is basically empty and useless. Everything you
@@ -50,3 +52,8 @@ don't want to interact with it.
 Contributions are welcome. Just ensure that tests and builds keep running.
 Please discuss any major changes beforehand, otherwise you may risk investing a
 lot of effort only to be rejected (see project goals).
+
+# Credits
+
+* Goat icon in the logo from flaticon.com with license "Free for personal and
+  commercial purpose with attribution."
