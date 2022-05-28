@@ -1,16 +1,15 @@
 ![goatd logo](logo.png)
 
-# goatd - GTD MarkDown task manager
+goatd (/ɡoʊtˈdiː/ ɡoʊt-DEE) is a task manager written in Go that
+implements the GTD (Getting Things Done) methodology. The name was chosen
+because it contains the letters G, T and D, because the server can run as a
+daemon (hence the ending in 'd'), because Go applications frequently contain
+'go' in their name and because goats are cute.
 
 **WARNING: Right now the project is basically empty and useless. Everything you
 see and read are ideas and plans.**
 
-goatd (/ɡoʊtˈdiː/ ɡoʊt-DEE) is a task manager written in Go that
-implements the GTD (Getting Things Done) methodology. The name was chosen
-because it contains the letters G, T and D, because the server can run as a
-daemon and because goats are cute.
-
-Goals of the project:
+# Goals
 
 * Simple to use
 * Few features
