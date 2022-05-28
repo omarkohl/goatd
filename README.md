@@ -54,8 +54,8 @@ lot of effort only to be rejected (see project goals).
 
 # Credits
 
-* The goat icon in the logo from flaticon.com with license "Free for personal
-  and commercial purpose with attribution."
+* The goat icon in the logo is from flaticon.com with license "Free for
+  personal and commercial purpose with attribution."
   [Link](https://www.flaticon.com/free-icon/goat_1998662).
 * The font in the logo is "Blackberry Jam" from Billy Argel licensed as "Free
   for personal use".
