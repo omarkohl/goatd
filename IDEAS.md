@@ -11,6 +11,8 @@ Just some ideas and possible future features.
   date.
 * Do projects need an ID? Probably not. If they do, the MD file could contain a
   h1 Meta section at the end of the file where such information is stored.
+  Maybe YAML metadata at the start of the file like hugo does would also be an
+  option https://github.com/yuin/goldmark-meta
 * Projects should have a short name (file name of the MD file) and a long name
   which is the title of the MD document. Unless we use IDs the short name
   should be used e.g. to add a task. Limitations upon the short name should
@@ -80,6 +82,13 @@ Reference/
 * Have an 'init' command that initializes a directory structure or have that
   happen automatically when specifying a new base-dir?
 * Have a verify/validate command that checks and maybe fixes structural problems etc.
+* goldmark includes an extension for tasks extension.TaskList . we could
+  extend that further and create a goldmark-task if the syntax should not be
+  enough e.g. for the PRIO etc. fields
+* goldmark-meta seems a simple project where to learn how to use/extend
+  goldmark . Also check https://github.com/abhinav/goldmark-hashtag
+* https://github.com/abhinav/goldmark-toc is interesting because a TOC is
+  useful and because it shows how to manipulate the MD document in place
 
 
 # Prior art
