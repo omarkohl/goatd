@@ -9,6 +9,8 @@ daemon (hence the ending in 'd'), because Go applications frequently contain
 **WARNING: Right now the project is basically empty and useless. Everything you
 see and read are ideas and plans.**
 
+**Update Oct. 2022** Right now [Everdo](https://everdo.net/) fulfills all my needs. Cross device and end-to-end encryption are really nice, even if unfortunately it's not open source. Therefore, for the time being goatd should be considered dormant, if not dead.
+
 # Goals
 
 * Simple to use
